@@ -1,51 +1,94 @@
 # Privacy Policy – Ceibo Apps
 
-**Last Updated:** January 28, 2026
+**Last Updated:** July 15, 2026
 
 At **Ceibo Apps**, we respect your privacy. This policy explains how our applications handle your data.
 
 ---
 
 ### Table of Contents
-1. [Data Collection by Ceibo Apps]
-2. [Device Permissions]
-3. [Third-Party Services (Google Play)]
-4. [Changes to This Policy]
-5. [Contact]
+1. [Data Collection by Ceibo Apps](#1-data-collection-by-ceibo-apps)
+2. [Device Permissions](#2-device-permissions)
+3. [Chrome Extensions](#3-chrome-extensions)
+4. [Third-Party Services](#4-third-party-services)
+5. [Limited Use Disclosure](#5-limited-use-disclosure)
+6. [Changes to This Policy](#6-changes-to-this-privacy-policy)
+7. [Contact](#7-contact)
 
 ---
 
 ## 1. Data Collection by Ceibo Apps
-Applications published by Ceibo Apps are designed with a **privacy-first** approach. Our apps:
+Applications and extensions published by Ceibo Apps are designed with a **privacy-first** approach. Our products:
 
 * **Do not** require user accounts.
 * **Do not** include advertising.
 * **Do not** use analytics or tracking technologies.
 * **Do not** communicate with external servers operated by Ceibo Apps.
 
-All application functionality operates **locally** on your device. We do not collect, store, transmit, or share personal or sensitive user data.
+All core functionality operates **locally** on your device. We do not collect, store, transmit, or share personal or sensitive user data.
 
 ## 2. Device Permissions
-If an app requests device permissions (such as camera, microphone, storage, or audio access), these permissions are used **solely** to provide the app’s core functionality. 
+If an app or extension requests device permissions (such as camera, microphone, storage, audio, or browser access), these permissions are used **solely** to provide the product's core functionality.
 
 No data accessed through these permissions is collected, stored, or transmitted by Ceibo Apps. We do not share any data with third parties.
 
-## 3. Third-Party Services (Google Play)
-Apps by Ceibo Apps are distributed through the **Google Play Store**. 
+## 3. Chrome Extensions
 
-Purchases, downloads, and billing are processed by Google and are subject to Google’s privacy policies. Google may independently collect information for payment processing, fraud prevention, and legal compliance, including:
-* Purchase and transaction details
-* Device information
-* Country or region
+### Minimal Save Image
 
-Ceibo Apps does not have access to, control over, or responsibility for data collected directly by Google. For more information, please review:
+**Images never leave your browser.** When you right-click an image and choose a format, the extension re-downloads that image from the page you are already on, decodes it with Chrome's built-in canvas, re-encodes it in the format you picked, and hands the result to Chrome's download manager. All of this happens inside your browser.
+
+**What is stored locally:**
+
+| Data | Where | Why |
+|------|-------|-----|
+| Your settings (format, quality, subfolder) | `chrome.storage.local` | So the extension remembers your preferences |
+| A count of images converted | `chrome.storage.local` | Shown in the popup. Never transmitted |
+| Pro license key + activation ID | `chrome.storage.local` | So Pro features work offline |
+
+Uninstalling the extension deletes all of it.
+
+**Pro license (optional):**
+Pro features are unlocked via a one-time payment processed by [Polar](https://polar.sh), which acts as the Merchant of Record. Card processing is handled by Stripe. This extension **never sees your card details**.
+
+* You purchase a license on Polar's checkout page. A license key is sent to your email.
+* You paste the key into the extension to activate it. Each key allows up to 2 device activations.
+* The extension calls `api.polar.sh` to activate and validate the key. The only data sent is the key itself and an opaque activation ID.
+* The paid status is cached locally. The key is re-validated once per day.
+
+The license check is the **only network call** this extension ever makes, and only if you purchase Pro.
+
+**Permissions explained:**
+
+| Permission | What it's for |
+|------------|---------------|
+| `contextMenus` | Adds the right-click menu |
+| `downloads` | Saves the converted file to Downloads |
+| `activeTab` | Temporary access to the current tab for image handling |
+| `storage` | Remembers settings locally |
+| `offscreen` | Provides a canvas to convert images (service workers have no DOM) |
+| `notifications` | Tells you why a conversion failed |
+| `scripting` | One-shot script for `blob:` image URLs in single-page apps |
+| `<all_urls>` | Reads the bytes of whichever image you right-clicked, on any site |
+| `clipboardRead` (optional) | Only requested when you press "Save image from clipboard" |
+
+## 4. Third-Party Services
+
+**Google Play Store:** Apps are distributed through Google Play. Purchases, downloads, and billing are processed by Google and are subject to Google's privacy policies. Google may independently collect information for payment processing, fraud prevention, and legal compliance. Ceibo Apps does not have access to or control over data collected by Google.
 * [Google Privacy Policy](https://policies.google.com/privacy)
 * [Google Play & Google Payments Privacy Notices](https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice)
 
-## 4. Changes to This Privacy Policy
-If this Privacy Policy is updated, the revised version will be made available at the hosting URL or within the application. Continued use of the app constitutes acceptance of the updated policy.
+**Polar (Chrome extensions only):** Pro license key activation and validation. The only data transmitted is the license key and an activation ID. No personal information, browsing data, or usage data is sent. See [Polar's privacy policy](https://polar.sh/legal/privacy).
 
-## 5. Contact
+No analytics providers, no ad networks, no affiliate redirects, no remotely-hosted code.
+
+## 5. Limited Use Disclosure
+Ceibo Apps' use of information received from Chrome APIs adheres to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies), including the Limited Use requirements.
+
+## 6. Changes to This Privacy Policy
+If this Privacy Policy is updated, the revised version will be made available at the hosting URL or within the application. Continued use of the product constitutes acceptance of the updated policy.
+
+## 7. Contact
 If you have any questions about this Privacy Policy, you may contact:
 
-**Email:** [ceiboapps@proton.me]
+**Email:** ceiboapps@proton.me
