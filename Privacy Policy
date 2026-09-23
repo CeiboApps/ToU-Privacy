@@ -1,19 +1,20 @@
 # Privacy Policy – Ceibo Apps
 
-**Last Updated:** July 15, 2026
+**Last Updated:** September 23, 2026
 
-At **Ceibo Apps**, we respect your privacy. This policy explains how our applications handle your data.
+At **Ceibo Apps**, we respect your privacy. This policy explains how our applications and extensions handle your data. Brand-wide rules apply to all Ceibo Apps products; product-specific sections add details where needed.
 
 ---
 
 ### Table of Contents
 1. [Data Collection by Ceibo Apps](#1-data-collection-by-ceibo-apps)
 2. [Device Permissions](#2-device-permissions)
-3. [Chrome Extensions](#3-chrome-extensions)
-4. [Third-Party Services](#4-third-party-services)
-5. [Limited Use Disclosure](#5-limited-use-disclosure)
-6. [Changes to This Policy](#6-changes-to-this-privacy-policy)
-7. [Contact](#7-contact)
+3. [Android Apps](#3-android-apps)
+4. [Chrome Extensions](#4-chrome-extensions)
+5. [Third-Party Services](#5-third-party-services)
+6. [Limited Use Disclosure](#6-limited-use-disclosure)
+7. [Changes to This Policy](#7-changes-to-this-privacy-policy)
+8. [Contact](#8-contact)
 
 ---
 
@@ -25,14 +26,57 @@ Applications and extensions published by Ceibo Apps are designed with a **privac
 * **Do not** use analytics or tracking technologies.
 * **Do not** communicate with external servers operated by Ceibo Apps.
 
-All core functionality operates **locally** on your device. We do not collect, store, transmit, or share personal or sensitive user data.
+All core functionality operates **locally** on your device. We do not collect, store, transmit, or share personal or sensitive user data, except as described in a product section below (for example, optional network features you trigger, or payment processors).
 
 ## 2. Device Permissions
 If an app or extension requests device permissions (such as camera, microphone, storage, audio, or browser access), these permissions are used **solely** to provide the product's core functionality.
 
-No data accessed through these permissions is collected, stored, or transmitted by Ceibo Apps. We do not share any data with third parties.
+No data accessed through these permissions is collected, stored, or transmitted by Ceibo Apps. We do not share any data with third parties for advertising.
 
-## 3. Chrome Extensions
+## 3. Android Apps
+
+### Minimal QR
+
+**Package:** `com.ceibo.minimalqr`
+
+Minimal QR keeps scanning on your device. We do not run servers that receive your camera feed, gallery images, or decoded QR/barcode contents. There are no user accounts.
+
+**Data processed on your device**
+
+* Camera preview while scanning (not uploaded to Ceibo)
+* Images you pick from the gallery or share into the app (decoded locally)
+* Decoded payloads you copy, share, open, or (with Pro) keep in local history
+* App preferences (language, onboarding, review flags)
+* Pro: local scan history and generated QR image files
+
+**Network use**
+
+* **Reveal Destination (optional):** your device follows public HTTP(S) redirects. Redirect hosts may see your IP and request headers. Ceibo does not receive that traffic. Private/LAN destinations are blocked.
+* **Google Play Billing:** one-time Pro unlock / restore — payment data is processed by Google under Google’s terms.
+* **In-app review / Store links:** via Google Play services when you choose them.
+
+**Permissions**
+
+* `CAMERA` — viewfinder scanning
+* `INTERNET` — Reveal Destination and Play Billing/review
+* `VIBRATE` — haptic feedback
+* `WRITE_EXTERNAL_STORAGE` (max SDK 28) — saving images on older Android versions
+
+Gallery access uses the system Photo Picker where possible (no broad media permission).
+
+**Sharing**
+
+We do not sell user data or share scan contents with advertisers. Apps you open via a result action (browser, maps, etc.) receive only what you send by tapping.
+
+**Retention and deletion**
+
+Clear history/generated items in-app, or uninstall to remove app-private storage.
+
+**Children**
+
+General utility; not directed at children under 13.
+
+## 4. Chrome Extensions
 
 ### Minimal Save Image
 
@@ -72,7 +116,7 @@ The license check is the **only network call** this extension ever makes, and on
 | `<all_urls>` | Reads the bytes of whichever image you right-clicked, on any site |
 | `clipboardRead` (optional) | Only requested when you press "Save image from clipboard" |
 
-## 4. Third-Party Services
+## 5. Third-Party Services
 
 **Google Play Store:** Apps are distributed through Google Play. Purchases, downloads, and billing are processed by Google and are subject to Google's privacy policies. Google may independently collect information for payment processing, fraud prevention, and legal compliance. Ceibo Apps does not have access to or control over data collected by Google.
 * [Google Privacy Policy](https://policies.google.com/privacy)
@@ -82,13 +126,13 @@ The license check is the **only network call** this extension ever makes, and on
 
 No analytics providers, no ad networks, no affiliate redirects, no remotely-hosted code.
 
-## 5. Limited Use Disclosure
+## 6. Limited Use Disclosure
 Ceibo Apps' use of information received from Chrome APIs adheres to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies), including the Limited Use requirements.
 
-## 6. Changes to This Privacy Policy
+## 7. Changes to This Privacy Policy
 If this Privacy Policy is updated, the revised version will be made available at the hosting URL or within the application. Continued use of the product constitutes acceptance of the updated policy.
 
-## 7. Contact
+## 8. Contact
 If you have any questions about this Privacy Policy, you may contact:
 
 **Email:** ceiboapps@proton.me
