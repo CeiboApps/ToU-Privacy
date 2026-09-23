@@ -1,138 +1,276 @@
 # Privacy Policy – Ceibo Apps
 
-**Last Updated:** September 23, 2026
+**Last Updated: September 23, 2026**
 
-At **Ceibo Apps**, we respect your privacy. This policy explains how our applications and extensions handle your data. Brand-wide rules apply to all Ceibo Apps products; product-specific sections add details where needed.
+At **Ceibo Apps**, we respect your privacy.
+
+Our products are designed to work locally on your device. We do not collect your personal or sensitive data, we do not sell or share your data, and we do not use advertising or analytics.
+
+This Privacy Policy explains how Ceibo Apps products handle data, including the specific behavior of our Android apps and Chrome extensions.
 
 ---
 
-### Table of Contents
+## Table of Contents
+
 1. [Data Collection by Ceibo Apps](#1-data-collection-by-ceibo-apps)
 2. [Device Permissions](#2-device-permissions)
 3. [Android Apps](#3-android-apps)
 4. [Chrome Extensions](#4-chrome-extensions)
 5. [Third-Party Services](#5-third-party-services)
 6. [Limited Use Disclosure](#6-limited-use-disclosure)
-7. [Changes to This Policy](#7-changes-to-this-privacy-policy)
+7. [Changes to This Privacy Policy](#7-changes-to-this-privacy-policy)
 8. [Contact](#8-contact)
 
 ---
 
-## 1. Data Collection by Ceibo Apps
-Applications and extensions published by Ceibo Apps are designed with a **privacy-first** approach. Our products:
+# 1. Data Collection by Ceibo Apps
 
-* **Do not** require user accounts, besides those to download and install the app from the Google Play Store.
-* **Do not** include advertising.
-* **Do not** use analytics or tracking technologies.
-* **Do not** communicate with external servers operated by Ceibo Apps.
+Ceibo Apps products are designed with a **privacy-first and local-first** approach.
 
-All core functionality operates **locally** on your device. We do not collect, store, transmit, or share personal or sensitive user data, except as described in a product section below (for example, optional network features you trigger, or payment processors).
+Our products:
 
-## 2. Device Permissions
-If an app or extension requests device permissions (such as camera, microphone, storage, audio, or browser access), these permissions are used **solely** to provide the product's core functionality.
+* **Do not require a Ceibo Apps account.**
+* **Do not collect personal or sensitive user data.**
+* **Do not sell user data.**
+* **Do not share user data with advertisers or analytics providers.**
+* **Do not contain advertising.**
+* **Do not use analytics or tracking technologies.**
+* **Do not operate servers that receive your app data.**
+* **Process core functionality locally on your device.**
 
-No data accessed through these permissions is collected, stored, or transmitted by Ceibo Apps. We do not share any data with third parties for advertising.
+Data accessed by our products, such as camera images, gallery images, QR codes, or browser images, is processed locally when the relevant functionality allows it.
 
-## 3. Android Apps
+Our products do not communicate with external services as part of their normal local functionality.
 
-### Minimal QR
+Where a product uses **Google Play or Google services**, that communication is with Google and is described below. Google independently operates those services and handles information according to Google's own policies.
+
+Any other specific network communication is explicitly described in the relevant product section of this Privacy Policy.
+
+---
+
+# 2. Device Permissions
+
+Our products may request permissions needed to provide their functionality.
+
+Examples include camera, storage, browser access, downloads, or other device capabilities.
+
+Permissions are used only for the functionality they provide. Data accessed through these permissions is processed locally on your device unless a specific feature described in this Privacy Policy requires communication with another service.
+
+Ceibo Apps does not collect or transmit data accessed through these permissions for advertising, analytics, tracking, or profiling.
+
+---
+
+# 3. Android Apps
+
+## Minimal QR
 
 **Package:** `com.ceibo.minimalqr`
 
-Minimal QR keeps scanning on your device. We do not run servers that receive your camera feed, gallery images, or decoded QR/barcode contents. There are no user accounts.
+Minimal QR performs QR and barcode scanning locally on your device.
 
-**Data processed on your device**
+Your camera feed, gallery images, and decoded QR/barcode contents are not uploaded to Ceibo Apps.
 
-* Camera preview while scanning (not uploaded to Ceibo)
-* Images you pick from the gallery or share into the app (decoded locally)
-* Decoded payloads you copy, share, open, or (with Pro) keep in local history
-* App preferences (language, onboarding, review flags)
-* Pro: local scan history and generated QR image files
+Minimal QR does not require an account.
 
-**Network use**
+### Data processed locally
 
-* **Reveal Destination (optional):** your device follows public HTTP(S) redirects. Redirect hosts may see your IP and request headers. Ceibo does not receive that traffic. Private/LAN destinations are blocked.
-* **Google Play Billing:** one-time Pro unlock / restore — payment data is processed by Google under Google’s terms.
-* **In-app review / Store links:** via Google Play services when you choose them.
+Minimal QR may process or store the following information on your device:
 
-**Permissions**
+* Camera preview while scanning
+* Images selected from your gallery or shared into the app
+* QR/barcode contents decoded on your device
+* Information that you choose to copy, share, or open from a scan result
+* App preferences, such as language and onboarding state
+* **Pro:** Scan history stored locally
+* **Pro:** Generated QR image files stored locally
 
-* `CAMERA` — viewfinder scanning
-* `INTERNET` — Reveal Destination and Play Billing/review
-* `VIBRATE` — haptic feedback
-* `WRITE_EXTERNAL_STORAGE` (max SDK 28) — saving images on older Android versions
+This information is not collected by Ceibo Apps.
 
-Gallery access uses the system Photo Picker where possible (no broad media permission).
+### Network functionality
 
-**Sharing**
+Minimal QR may use the network for the following features:
 
-We do not sell user data or share scan contents with advertisers. Apps you open via a result action (browser, maps, etc.) receive only what you send by tapping.
+**Reveal Destination**
 
-**Retention and deletion**
+If you choose **Reveal Destination**, your device follows public HTTP(S) redirects to determine where a URL ultimately leads.
 
-Clear history/generated items in-app, or uninstall to remove app-private storage.
+The servers involved in those requests may receive information normally associated with an HTTP request, such as your IP address and request headers.
 
-**Children**
+**These requests are made directly by your device. Ceibo Apps does not receive the traffic or the information sent to those servers.**
 
-General utility; not directed at children under 13.
+Private and local-network destinations are blocked.
 
-## 4. Chrome Extensions
+**Google Play**
 
-### Minimal Save Image
+Google Play and Google services may be used for:
 
-**Images never leave your browser.** When you right-click an image and choose a format, the extension re-downloads that image from the page you are already on, decodes it with Chrome's built-in canvas, re-encodes it in the format you picked, and hands the result to Chrome's download manager. All of this happens inside your browser.
+* Purchasing or restoring the Pro unlock
+* In-app review functionality
+* Opening Google Play Store pages
 
-**What is stored locally:**
+Payment information is handled by Google. Ceibo Apps does not receive your payment card information.
 
-| Data | Where | Why |
-|------|-------|-----|
-| Your settings (format, quality, subfolder) | `chrome.storage.local` | So the extension remembers your preferences |
-| A count of images converted | `chrome.storage.local` | Shown in the popup. Never transmitted |
-| Pro license key + activation ID | `chrome.storage.local` | So Pro features work offline |
+### Permissions
 
-Uninstalling the extension deletes all of it.
+Minimal QR may request:
 
-**Pro license (optional):**
-Pro features are unlocked via a one-time payment processed by [Polar](https://polar.sh), which acts as the Merchant of Record. Card processing is handled by Stripe. This extension **never sees your card details**.
+* `CAMERA` — used for QR/barcode scanning
+* `INTERNET` — used for Reveal Destination and Google Play functionality
+* `VIBRATE` — used for haptic feedback
+* `WRITE_EXTERNAL_STORAGE` on Android versions where applicable — used for saving generated images
 
-* You purchase a license on Polar's checkout page. A license key is sent to your email.
-* You paste the key into the extension to activate it. Each key allows up to 2 device activations.
-* The extension calls `api.polar.sh` to activate and validate the key. The only data sent is the key itself and an opaque activation ID.
-* The paid status is cached locally. The key is re-validated once per day.
+Gallery access uses Android's system Photo Picker where available, rather than broad media access.
 
-The license check is the **only network call** this extension ever makes, and only if you purchase Pro.
+### Sharing
 
-**Permissions explained:**
+Ceibo Apps does not sell or share scan contents with advertisers, analytics providers, or other companies.
 
-| Permission | What it's for |
-|------------|---------------|
-| `contextMenus` | Adds the right-click menu |
-| `downloads` | Saves the converted file to Downloads |
-| `activeTab` | Temporary access to the current tab for image handling |
-| `storage` | Remembers settings locally |
-| `offscreen` | Provides a canvas to convert images (service workers have no DOM) |
-| `notifications` | Tells you why a conversion failed |
-| `scripting` | One-shot script for `blob:` image URLs in single-page apps |
-| `<all_urls>` | Reads the bytes of whichever image you right-clicked, on any site |
-| `clipboardRead` (optional) | Only requested when you press "Save image from clipboard" |
+If you choose to open, copy, or share a scan result, Android passes the information you selected to the application you choose, such as a browser, maps application, or messaging application.
 
-## 5. Third-Party Services
+That action is initiated by you.
 
-**Google Play Store:** Apps are distributed through Google Play. Purchases, downloads, and billing are processed by Google and are subject to Google's privacy policies. Google may independently collect information for payment processing, fraud prevention, and legal compliance. Ceibo Apps does not have access to or control over data collected by Google.
+### Retention and deletion
+
+You can clear scan history and generated items from within the app.
+
+Uninstalling Minimal QR removes its app-private data according to Android's normal application data handling.
+
+### Children
+
+Minimal QR is a general-purpose utility and is not directed at children under 13.
+
+---
+
+# 4. Chrome Extensions
+
+## Minimal Save Image
+
+Minimal Save Image processes images locally in your browser.
+
+When you right-click an image and choose a format, the extension obtains the image from the webpage you are already viewing, processes it locally using your browser, converts it to the selected format, and passes the resulting file to Chrome's download manager.
+
+**The image is not uploaded to Ceibo Apps.**
+
+### Data stored locally
+
+The extension stores the following information locally using `chrome.storage.local`:
+
+| Data                                                  | Purpose                           |
+| ----------------------------------------------------- | --------------------------------- |
+| Your settings, such as format, quality, and subfolder | Remember your preferences         |
+| Number of images converted                            | Display the conversion count      |
+| Pro license key                                       | Enable Pro features               |
+| Pro activation ID                                     | Identify the local Pro activation |
+
+This information is stored locally by the extension and is not used for analytics or tracking.
+
+### Pro license
+
+Pro features are unlocked through a one-time purchase.
+
+The purchase is handled by **Polar**, which acts as the Merchant of Record. Payment processing is handled by Polar and its payment providers.
+
+Minimal Save Image does not receive or store your payment card information.
+
+After purchasing a license:
+
+1. You receive a license key from Polar.
+2. You enter the license key into the extension.
+3. The extension contacts Polar's API to activate and validate the license.
+4. The extension sends the license key and an opaque activation ID for this purpose.
+5. The paid status is stored locally.
+
+The extension periodically re-validates the license.
+
+**The Polar license service is the only non-Google external service that Minimal Save Image communicates with.**
+
+No browsing data, image contents, page contents, or usage analytics are sent to Ceibo Apps.
+
+### Permissions
+
+| Permission                 | Purpose                                                                                 |
+| -------------------------- | --------------------------------------------------------------------------------------- |
+| `contextMenus`             | Adds the right-click menu                                                               |
+| `downloads`                | Saves converted files through Chrome's download manager                                 |
+| `activeTab`                | Provides temporary access to the current tab for image handling                         |
+| `storage`                  | Stores settings and Pro license information locally                                     |
+| `offscreen`                | Provides a browser context with a canvas for image conversion                           |
+| `notifications`            | Explains conversion errors                                                              |
+| `scripting`                | Handles certain `blob:` image URLs                                                      |
+| `<all_urls>`               | Allows the extension to access an image you explicitly choose to convert on any website |
+| `clipboardRead` (optional) | Used only when you explicitly use the clipboard image feature                           |
+
+The `<all_urls>` permission is required because images may be hosted on any website.
+
+Minimal Save Image does not use this permission to collect browsing history, track websites, or send browsing data to Ceibo Apps.
+
+---
+
+# 5. Third-Party Services
+
+## Google Play and Google Services
+
+Android applications may use Google Play and Google services for functionality provided by Android or Google Play, including application distribution, purchases, billing, reviews, and related functionality.
+
+Google independently operates these services.
+
+Google may collect and process information under its own privacy policies, including information related to payments, fraud prevention, security, legal compliance, and Google Play.
+
+**Ceibo Apps does not control information that Google independently collects or processes.**
+
+For more information:
+
 * [Google Privacy Policy](https://policies.google.com/privacy)
 * [Google Play & Google Payments Privacy Notices](https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice)
 
-**Polar (Chrome extensions only):** Pro license key activation and validation. The only data transmitted is the license key and an activation ID. No personal information, browsing data, or usage data is sent. See [Polar's privacy policy](https://polar.sh/legal/privacy).
+## Polar
 
-No analytics providers, no ad networks, no affiliate redirects, no remotely-hosted code.
+Minimal Save Image uses Polar only for Pro license purchasing, activation, and validation.
 
-## 6. Limited Use Disclosure
-Ceibo Apps' use of information received from Chrome APIs adheres to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies), including the Limited Use requirements.
+The extension sends the license key and an opaque activation ID to Polar's API for license-related functionality.
 
-## 7. Changes to This Privacy Policy
-If this Privacy Policy is updated, the revised version will be made available at the hosting URL or within the application. Continued use of the product constitutes acceptance of the updated policy.
+Payment information is handled by Polar and its payment providers. Ceibo Apps does not receive or store payment card information.
 
-## 8. Contact
-If you have any questions about this Privacy Policy, you may contact:
+See [Polar's Privacy Policy](https://polar.sh/legal/privacy).
 
-**Email:** ceiboapps@proton.me
+## No Advertising or Analytics
+
+Ceibo Apps products do not use:
+
+* Advertising networks
+* Analytics providers
+* Tracking services
+* Affiliate redirects
+* Advertising SDKs
+* Remote advertising scripts
+* Remotely hosted code for core functionality
+
+---
+
+# 6. Limited Use Disclosure
+
+Ceibo Apps' use of information received from Chrome APIs complies with the **Chrome Web Store User Data Policy**, including its Limited Use requirements.
+
+Chrome API permissions are used only to provide the functionality described in this Privacy Policy.
+
+Ceibo Apps does not sell user data or use Chrome API data for advertising, analytics, tracking, or unrelated purposes.
+
+See the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies).
+
+---
+
+# 7. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time.
+
+When we make changes, the updated version will be made available at the hosting URL or within the relevant application or extension.
+
+The **Last Updated** date at the top of this policy indicates when the policy was most recently revised.
+
+---
+
+# 8. Contact
+
+If you have questions about this Privacy Policy or the privacy practices of Ceibo Apps, you may contact:
+
+**Email:** [ceiboapps@proton.me](mailto:ceiboapps@proton.me)
